@@ -7,13 +7,28 @@ $("a[href^='#'").click(function (event) {
 	$('html,body').animate({scrollTop: offset_top}, 500)
 });
 
+time();
+
 function time() {
 	var timer = new Date();
-	var h = timer.getHours();
-	var m = timer.getMinutes();
-	var s = timer.getSeconds();
+	var h = addZeros(timer.getHours(), 2);
+	var m = addZeros(timer.getMinutes(), 2);
+
+	var s = addZeros(timer.getSeconds(), 2);
 	document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
 } 
+
+function addZeros(num, digit) { 
+	  var zero = '';
+	  num = num.toString();
+	  if (num.length < digit) {
+	    for (i = 0; i < digit - num.length; i++) {
+	      zero += '0';
+	    }
+	  }
+	  return zero + num;
+}
+
 
 setInterval(function(){       
 	time();
