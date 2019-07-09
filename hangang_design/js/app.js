@@ -1,10 +1,9 @@
 $("a[href^='#'").click(function (event) {
 	event.preventDefault();
 	var target = $(this.hash);
-	var header_height = $('#header').height();
-	// console.log(header_height);
+	var header_height = $('#header').height();	
 	var offset_top = target.offset().top - header_height;
-	$('html,body').animate({scrollTop: offset_top}, 500)
+	$('html,body').animate({scrollTop: offset_top}, 700)
 });
 
 time();
@@ -33,3 +32,19 @@ function addZeros(num, digit) {
 setInterval(function(){       
 	time();
 },1000);
+
+// var scroll = false;
+// $(window).on('scroll mousewheel', function (e) {
+// 	if (scroll){
+// 		e.preventDefault();
+// 		e.stopPropagation();
+// 		scrolled();
+// 	}else{
+// 		scroll = true;
+// 	}
+// });
+
+// function scrolled(){
+
+// 	scroll = false;
+// }
