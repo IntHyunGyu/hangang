@@ -15,17 +15,19 @@ a {
 }
 
 body {
+	width: 1300px;
 	margin: 0 auto;
 }
 
 header {
 	position: fixed;
 	top: 0;
-	width: 100%;
+	width: 1300px;
 	height: 80px;
 	background: #23429c;
 	display: flex;
 	justify-content: center;
+	z-index: 10000;
 }
 
 header .logo {
@@ -113,21 +115,64 @@ header .right_menu li:hover {
 #gallery {
 	width: 100%;
 	height: 100vh;
-	border: 1px solid black;
+	/*background: hsla(233, 100%, 17%, 0.7)*/
+	/*background: #81d4fa;*/
 }
 
 #gallery > div {
 	width: 50%;
 	height: 50%;
 	float: left;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 #gallery .g2 > div {
 	width: 50%;
 	height: 50%;
 	float: left;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
+}
+
+#gallery .card {
+	position: relative;
+}
+
+#gallery .front {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: 0.5s;
+	z-index: 2;
+}
+
+#gallery .front img {
+	width: 100%;
+	height: 100%;
+	
+}
+
+#gallery .back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: 0.5s;
+	z-index: 1;
+	transform: rotateY(-180deg);
+}
+
+#gallery .back img {
+	width: 100%;
+	height: 100%;
+}
+
+#gallery .card:hover .front {
+	transform: rotateY(180deg);
+	z-index: 1;
+}
+
+#gallery .card:hover .back {
+	transform: rotateY(0deg);
+	z-index: 2;
 }
 
 footer {
