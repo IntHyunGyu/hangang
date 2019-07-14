@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>한강디자인</title>
 	<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap&subset=korean" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="js/app.js" defer="defer"></script>
@@ -23,34 +24,53 @@
 		</ul>
 	</header>
 	<div id="main">
-		<span>현재 시간</span>
 		<div id="clock"></div>
+		<div class="temp">
+			<p class="temp_title">현재 한강의 온도는?</p>
+			<div class="temp_temp"><img src="img/icon.svg" alt=""><p>24.6도</p></div>
+		</div>
 	</div>
 	<div id="gallery">
-		<div class="g1"></div>
+		<div class="g1">
+			<iframe src="https://www.youtube.com/embed/d7nSSIzR5B4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
 		<div class="g2">
-			<div class="g2_1 card">
-				<div class="front"><img src="img/mb.jpg" alt=""></div>
-				<div class="back"><img src="img/mb_text.jpg" alt=""></div>
+			<div class="g2_1">
+				<p>백 번을 실패해도 포기하지 않으면 성공한다</p>
 			</div>
 			<div class="g2_2 card">
 				<div class="front"><img src="img/g2_2.jpg" alt="img"></div>
-				<div class="back"><img src="img/g2_2_text.jpg" alt="text"></div>
+				<div class="back"><p>자신을 극복하는 사람에게는 세상이 열린다.</div>
 			</div>
 			<div class="g2_3 card">
 				<div class="front"><img src="img/g2_3.jpg" alt="img"></div>
-				<div class="back"><img src="img/g2_3_text.jpg" alt="text"></div>
+				<div class="back"><p>1분마다 인생을 바꿀 기회는 찾아온다.</p></div>
 			</div>
-			<div class="g2_4"></div>
+			<div class="g2_4">
+				<p>오늘은 내 지나온 인생의 마지막 날이자 <br>남은 인생의 첫 번째 날이다.</p>
+			</div>
 		</div>
 		<div class="g3">
-			
+			<img src="img/g3.jpg" alt="img">
 		</div>
-		<div class="g4"></div>
+		<div class="g4">
+			<iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/636059595&color=%235b9fee&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+		</div>
 	</div>
 	<footer id="footer">
-		<div class="email"></div>
-		<div class="copyright"></div>
+		<div class="email">
+			<form action="/email" method="post">
+				<input type="text" name="name"><br>
+				<input type="text" name="email"><br>
+				<input type="text" name="text"><br>
+				<input type="submit" value="전송">
+			</form>
+		</div>
+		<div class="copyright">
+			<p class="copy_text">
+				©2019. HyunGyu Co. all rights reserved.
+			</p>
+		</div>
 	</footer>
 </body>
 </html>
