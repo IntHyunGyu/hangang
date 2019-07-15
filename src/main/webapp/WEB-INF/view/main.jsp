@@ -7,9 +7,11 @@
 	<meta charset="UTF-8">
 	<title>한강디자인</title>
 	<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap&subset=korean" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="js/app.js" defer="defer"></script>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
 </head>	
 <body>
 	<header id="header">
@@ -29,7 +31,7 @@
 		<div id="clock"></div>
 		<div class="temp">
 			<p class="temp_title">현재 한강의 온도는?</p>
-			<div class="temp_temp"><img src="img/icon.svg" alt=""><p>${temp }도</p></div>
+			<div class="temp_temp"><p>${temp }도</p></div>
 		</div>
 	</div>
 	<div id="gallery">
@@ -61,17 +63,48 @@
 	</div>
 	<footer id="footer">
 		<div class="email">
-			<form action="/email" method="post">
-				<input type="text" name="name"><br>
-				<input type="text" name="email"><br>
-				<input type="text" name="text"><br>
-				<input type="submit" value="전송">
-			</form>
+			<div class="email_container">
+				<form class="form-horizontal" name="form" role="form" method="post" action="/mail">
+					<div class="form-group">
+						<label for="name" class="col-sm-2 control-label" required="required">Name</label>
+						<div class="col-sm-15">
+							<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-15">
+							<input type="email" class="form-control" id="email" name="email" placeholder="inthyungyu@gmail.com" value="inthyungyu@gmail.com" readonly="readonly">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="message" class="col-sm-2 control-label" required="required">Message</label>
+						<div class="col-sm-15">
+							<textarea class="form-control" rows="18" id="message" name="message"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-15 col-sm-offset-2">
+							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-15 col-sm-offset-2">
+							<! Will be used to display an alert to the user>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 		<div class="copyright">
-			<p class="copy_text">
-				©2019. HyunGyu Co. all rights reserved.
-			</p>
+			<div class="copy_text">
+				<p>&copy;2019. HyunGyu Co. all rights reserved.</p>
+			</div>
+			<div class="copy_sns">
+				<a href="https://www.facebook.com/AHK0808"><img src="img/facebook.png" alt=""></a>
+				<a href="https://www.instagram.com/java_hyun.g/?hl=ko"><img src="img/instagram.png" alt=""></a>
+				<a href="https://github.com/IntHyunGyu"><img src="img/github-logo.png" alt=""></a>
+			</div>
 		</div>
 	</footer>
 </body>
