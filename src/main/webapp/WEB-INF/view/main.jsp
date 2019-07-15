@@ -101,9 +101,9 @@
 				<p>&copy;2019. HyunGyu Co. all rights reserved.</p>
 			</div>
 			<div class="copy_sns">
-				<a href="https://www.facebook.com/AHK0808"><img src="img/facebook.png" alt=""></a>
-				<a href="https://www.instagram.com/java_hyun.g/?hl=ko"><img src="img/instagram.png" alt=""></a>
-				<a href="https://github.com/IntHyunGyu"><img src="img/github-logo.png" alt=""></a>
+				<a href="https://facebook.com/AHG0808" target="blank"><img src="img/facebook.png" alt=""></a>
+				<a href="https://www.instagram.com/java_hyun.g/?hl=ko" target="blank"><img src="img/instagram.png" alt=""></a>
+				<a href="https://github.com/IntHyunGyu" target="blank"><img src="img/github-logo.png" alt=""></a>
 			</div>
 		</div>
 	</footer>
