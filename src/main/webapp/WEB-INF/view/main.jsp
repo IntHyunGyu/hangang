@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -64,7 +63,7 @@
 	<footer id="footer">
 		<div class="email">
 			<div class="email_container">
-				<form class="form-horizontal" name="form" role="form" method="post" action="/mail">
+				<form class="form-horizontal" name="frm" role="form" method="post" action="/mail">
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label" required="required">Name</label>
 						<div class="col-sm-15">
@@ -72,25 +71,26 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="email" class="col-sm-2 control-label">Email</label>
+						<label for="email" class="col-sm-2 control-label">To</label>
 						<div class="col-sm-15">
-							<input type="email" class="form-control" id="email" name="email" placeholder="inthyungyu@gmail.com" value="inthyungyu@gmail.com" readonly="readonly">
+							<input type="email" class="form-control" id="toEmail" name="toEmail" placeholder="inthyungyu@gmail.com" value="inthyungyu@gmail.com" readonly="readonly">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">From</label>
+						<div class="col-sm-15">
+							<input type="email" class="form-control" id="fromEmail" name="fromEmail" placeholder="asdf@asdf">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="message" class="col-sm-2 control-label" required="required">Message</label>
 						<div class="col-sm-15">
-							<textarea class="form-control" rows="18" id="message" name="message"></textarea>
+							<textarea class="form-control" rows="10" id="message" name="message"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-15 col-sm-offset-2">
-							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-15 col-sm-offset-2">
-							<! Will be used to display an alert to the user>
+							<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary" />
 						</div>
 					</div>
 				</form>

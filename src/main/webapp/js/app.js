@@ -33,6 +33,46 @@ setInterval(function(){
 	time();
 },1000);
 
+function checkFrom() {
+	if(document.frm.name.value.trim()=="") {
+		alert("이름이 등록되지 않았습니다.");
+		document.frm.name.focus();
+		return false;
+	} else if(document.frm.message.value.trim()=="") {
+		alert("보낼 내용을 입력 해주세요.");
+		document.frm.message.focus();
+		return false;
+	} else if(document.frm.fromEmail.value.trim()=="") {
+		alert("보내는 분 이메일을 입력 해주세요.");
+		document.frm.message.focus();
+		return false;
+	}
+	else return true;
+}
+
+$('#submit').on('click', function (e){
+	e.preventDefault();
+	
+	if(checkFrom()){
+		$.ajax({
+			url: '/mail',
+			method: 'post', 
+			data: {
+				name: document.querySelector('#name').value,
+				message: document.querySelector('#message').value,
+				toEmail: document.querySelector('#toEmail').value,
+				fromEmail: document.querySelector('#fromEmail').value,
+			},
+			success: function(e){
+				alert('발송 성공');
+			},
+			error: function(e) {
+				alert('발송 실패');
+			}
+		});
+	}
+})
+
 	
 
 
